@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-red-500 dark:bg-blue-500">
+    <button
+        class="bg-transparent-500 text-white px-5 py-2 m-4 ring-2 hover:bg-green-50 hover:text-black rounded-sm">切换</button>
+</body>
+
+<script>
+    document.querySelector('button').onclick = function () {
+        document.querySelector('html').classList.add('dark')
+    }
+</script>
+
+<script>
+    class Action {
+        constructor(name) {
+            this.name = name
+            this.nextActions = null
+        }
+
+        nextAction(action) {
+            this.nextActions = action
+        }
+
+        handle() {
+            console.log(this.name);
+            this.nextActions && this.nextActions.handle()
+        }
+    }
+    const a1 = new Action('董事长')
+    const a2 = new Action('总经理')
+    const a3 = new Action('秘书')
+    a1.nextAction(a2)
+    a2.nextAction(a3)
+    a1.handle()
+</script>
+
+</html>

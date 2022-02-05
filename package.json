@@ -1,0 +1,21 @@
+{
+  "name": "randomrollcall",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "autoprefixer": "^10.4.0",
+    "element-plus": "^1.2.0-beta.3",
+    "tailwindcss": "^2.2.19",
+    "vue": "^3.2.16",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  }
+}
